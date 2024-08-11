@@ -35,8 +35,8 @@ You can start a Rhino project by running
 - dependancies.r - add packages here
 
     f. Tools
-- .github
-- .lints
+- `.github`
+- `.lints`
 - example.Rproj
 
 
@@ -65,4 +65,21 @@ You can start a Rhino project by running
                 box::use(
                     config(get)
                 )
+
+
+Details
+This function is a wrapper around `shiny::shinyApp()`. It reads rhino.yml and performs some configuration steps (logger, static files, box modules). You can run a Rhino application in typical fashion using shiny::runApp().
+
+Rhino will load the app/main.R file as a box module (`box::use(app/main)`). It should export two functions which take a single id argument - the ui and server of your top-level Shiny module.
+
+#Details
+The recommended steps for migrating an existing Shiny application to Rhino:
+
+Put all app files in the app directory, so that it can be run with `shiny::shinyAppDir("app")` (assuming all dependencies are installed).
+
+If you have a list of dependencies in form of library() calls, put them in the dependencies.R file. If this file does not exist, Rhino will generate it based on `renv::dependencies("app")`.
+
+If your project uses {renv}, put renv.lock and renv directory in the project root. Rhino will try to only add the necessary dependencies to your lockfile.
+
+Run `rhino::init()` in the project root.
 
