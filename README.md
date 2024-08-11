@@ -6,12 +6,12 @@
     Main Source Files
 - app.R - 
 - app - where the shiny application lives it contains
-        + view - for shiny modules and related code 
-        + logic - for application code independent of shiny
-        + js - where the javascript files go into, with index.js as the entry point
-        + styles - Sass code goes here and rhino sources the file for you. All you need to call is `rhino::build_sass()` function
-        + static - Add static files here i.e. Images, favicons, and static files
-        + main.R - Entry point for your application
+        - view - for shiny modules and related code 
+        - logic - for application code independent of shiny
+        - js - where the javascript files go into, with index.js as the entry point
+        - styles - Sass code goes here and rhino sources the file for you. All you need to call is - - -    `rhino::build_sass()` function
+        - static - Add static files here i.e. Images, favicons, and static files
+        - main.R - Entry point for your application
 
 - config.yml -is the configuration file for the rhino app
 
