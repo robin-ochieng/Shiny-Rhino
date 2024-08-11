@@ -1,9 +1,14 @@
 # Shiny-Rhino
+Rhino is a framework for enterprise shiny apps.
+Technically its an R package.
 You can start a Rhino project by running 
         rhino::init("my_app")
 
 1. Rhino File Structure.
-    Main Source Files
+
+![alt text](image.png)
+
+    a. Main Source Files/ sources
 - app.R - 
 - app - where the shiny application lives it contains
         - view - for shiny modules and related code 
@@ -13,13 +18,26 @@ You can start a Rhino project by running
         - static - Add static files here i.e. Images, favicons, and static files
         - main.R - Entry point for your application
 
+    c. Configuration
 - config.yml -is the configuration file for the rhino app
+- .Rprofile
+- rhino.yml
 
+    d. Tests 
 - tests - where to add unittests
+      - cypress
+      - cypress.json
+      - test that
 
+    e. Dependancies
 - renv -
 - renv.lock - take snapshots
 - dependancies.r - add packages here
+
+    f. Tools
+- .github
+- .lints
+- example.Rproj
 
 
 2. Code Architecture
