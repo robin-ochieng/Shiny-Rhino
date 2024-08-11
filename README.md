@@ -1,8 +1,8 @@
 # Shiny-Rhino
-##You can start a Rhino project by running 
+You can start a Rhino project by running 
         rhino::init("my_app")
 
-##1. Rhino File Structure.
+1. Rhino File Structure.
     Main Source Files
 - app.R - 
 - app - where the shiny application lives it contains
@@ -22,13 +22,13 @@
 - dependancies.r - add packages here
 
 
-##2. Code Architecture
+2. Code Architecture
 - box i.e
         box::use(
             Shiny(Ns,moduleserver,Uioutput, renderUI))
 - modules
 
-##3. Code Quality
+3. Code Quality
     a. Linting - Refers to the process of analyzing code to detect potential errors, stylistic issues, and non-optimal coding practices.
             rhino::lint_r()
             rhino::lint_Sass()
