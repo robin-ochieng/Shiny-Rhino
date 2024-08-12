@@ -1,8 +1,8 @@
 # Shiny-Rhino
-Rhino is a framework for enterprise shiny apps.
-Technically its an R package.
-You can start a Rhino project by running 
-        rhino::init("my_app")
+- Rhino is a framework for enterprise shiny apps.
+- Technically its an R package.
+- You can start a Rhino project by running 
+        `rhino::init("my_app")`
 
 1. Rhino File Structure.
 
